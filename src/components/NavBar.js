@@ -20,7 +20,7 @@ export default class NavBar extends Component {
                         <img src={logo} alt="Beach Resort" />
                     </Link>
                     <button type="button" className="nav-btn" onClick={this.handleToggle}>
-                        <FaAlignRight clasName="nav-icon" />
+                        <FaAlignRight className="nav-icon" />
                     </button>
                 </div>
                 <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
