@@ -24,7 +24,8 @@ class RoomProvider extends Component {
             rooms,
             featuredRooms,
             sortedRooms: rooms,
-            loading: false})
+            loading: false
+        })
     }
 
     formatData(items) {
@@ -54,5 +55,15 @@ class RoomProvider extends Component {
 }
 
 const RoomConsumer = RoomContext.Consumer;
+
+//this is a higher order componenet, where a component will return another component
+
+export function withRoomConsumer(Component) {
+  return function ConsumerWrapper(props) {
+      return <RoomConsumer>
+          {value => <Component {...props} context={value}/>}
+      </RoomConsumer>
+  }
+}
 
 export { RoomProvider, RoomConsumer, RoomContext }
