@@ -34,6 +34,10 @@ export default function RoomFilter({rooms}) {
         return <option value={item} key={index}>{item}</option>
     })
 
+    capacities = capacities.map((item, index) => {
+        return <option value={item} key={index}>{item}</option>
+    })
+
     return (
         <section className="filter-container">
             <Title title="search rooms"/>
@@ -47,6 +51,15 @@ export default function RoomFilter({rooms}) {
                     </select>
                 </div>
                 {/* end of select type */}
+                {/* select guests */}
+                <div className="form-group">
+                    <label htmlFor="capacity">guests</label>
+                    <select name="capacity" id="capacity" value={type} 
+                    className="form-control" onChange={handleChange}>
+                    {capacities}
+                    </select>
+                </div>
+                {/* end of select guests */}
             </form>
         </section>
     )
