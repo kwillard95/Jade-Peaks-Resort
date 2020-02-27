@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import defaultBcg from '../images/room-1.jpeg';
-import Hero from '../components/Hero'
+import defaultBcg from '../images/default-room.jpg';
 import Banner from '../components/Banner';
 import { Link } from 'react-router-dom';
 import { RoomContext } from '../context';
@@ -14,10 +13,9 @@ export default class SingleRoom extends Component {
             slug: this.props.match.params.slug,
             defaultBcg
         }
-        // console.log(this.props)
     }
     static contextType = RoomContext;
-    // componentDidMount() {}
+    
     render() {
         const { getRoom } = this.context;
         const room = getRoom(this.state.slug);
@@ -32,11 +30,11 @@ export default class SingleRoom extends Component {
             )
         }
         const { name, description, capacity, size, price, extras, breakfast, pets, images } = room;
-        console.log('imagesss', images);
-        const [mainImg, ...defaultImg] = images;
+        // const [mainImg, ...defaultImg] = images;
         return (
             <>
-                <StyledHero img={mainImg || this.state.defaultBcg}>
+                {/* <StyledHero img={mainImg || this.state.defaultBcg}> */}
+                <StyledHero img={this.state.defaultBcg}>
                     <Banner title={`${name} room`}>
                         <Link to='/rooms' className='btn-primary'>
                             Back to Rooms
@@ -45,7 +43,7 @@ export default class SingleRoom extends Component {
                 </StyledHero>
                 <section className='single-room'>
                     <div className="single-room-images">
-                        {defaultImg.map((item, index) => {
+                        {images.map((item, index) => {
                             return (
                                 <img key={index} src={item} alt={name} />
                             )

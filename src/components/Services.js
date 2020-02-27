@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Title from './Title';
-import {FaCocktail, FaHiking, FaShuttleVan, FaBeer} from 'react-icons/fa'
+import {FaUtensils, FaHiking, FaShuttleVan, FaWineGlass} from 'react-icons/fa'
 
 export default class Services extends Component {
     state={
         services: [
             {
-                icon: <FaCocktail />,
-                title: 'free cocktails',
+                icon: <FaUtensils />,
+                title: 'award-winning chefs',
                 info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis.'
             },
             {
@@ -21,8 +21,8 @@ export default class Services extends Component {
                 info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis.'
             },
             {
-                icon: <FaBeer />,
-                title: 'strongest beer',
+                icon: <FaWineGlass />,
+                title: 'premium wine',
                 info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis.'
             }
         ]
