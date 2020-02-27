@@ -20,7 +20,7 @@ body {
   padding-top: 66px;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Spartan;
   line-height: 1.4;
 }
 h1 {
@@ -111,6 +111,10 @@ h6 {
   font-size: 1.5rem;
   color: var(--primaryColor);
 }
+.nav-logo {
+  height: 50px;
+  width: 100px;
+}
 .nav-links {
   height: 0;
   overflow: hidden;
@@ -159,13 +163,13 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images/low1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .roomsHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images/default-room.jpg");
   min-height: 60vh;
 }
 /* End of Hero */

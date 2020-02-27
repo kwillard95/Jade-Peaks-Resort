@@ -92,8 +92,6 @@ export default function RoomFilter({rooms}) {
                         id="breakfast" checked={breakfast} onChange={handleChange}/>
                         <label htmlFor="breakfast">breakfast</label>
                     </div>
-                </div>
-                <div className="form-group">
                     <div className="single-extra">
                         <input type="checkbox" name="pets"
                         id="pets" checked={pets} onChange={handleChange}/>
