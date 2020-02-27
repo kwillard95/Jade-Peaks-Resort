@@ -54,7 +54,7 @@ export default function RoomFilter({rooms}) {
                 {/* select guests */}
                 <div className="form-group">
                     <label htmlFor="capacity">guests</label>
-                    <select name="capacity" id="capacity" value={type} 
+                    <select name="capacity" id="capacity" value={capacity} 
                     className="form-control" onChange={handleChange}>
                     {capacities}
                     </select>
