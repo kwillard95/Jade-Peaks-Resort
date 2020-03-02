@@ -35,7 +35,7 @@ export default class SingleRoom extends Component {
             <>
                 {/* <StyledHero img={mainImg || this.state.defaultBcg}> */}
                 <StyledHero img={this.state.defaultBcg}>
-                    <Banner title={`${name} room`}>
+                    <Banner title={`${name}`}>
                         <Link to='/rooms' className='btn-primary'>
                             Back to Rooms
                 </Link>
