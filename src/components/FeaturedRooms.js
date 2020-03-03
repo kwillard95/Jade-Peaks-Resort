@@ -38,7 +38,6 @@ function FeaturedRooms({ context }) {
             <section className="featured-rooms">
                 <Title title="featured rooms" />
                 <div className="carousel-container">
-                    <FaAngleLeft className="featured-rooms-icon" onClick={previousProperty} />
                     <div className={`cards-slider active-slide-${roomIdx}`}>
                         <div className="cards-wrapper" style={{
                             transform: `translateX(-${roomIdx*(100/rooms.length)}%)`
@@ -48,8 +47,11 @@ function FeaturedRooms({ context }) {
                             }
                         </div>
                     </div>
-                    <FaAngleRight className="featured-rooms-icon" onClick={nextProperty} />
                 </div>
+                            <div className="icon-container">
+                            <FaAngleLeft className="featured-rooms-icon" onClick={previousProperty} />
+                            <FaAngleRight className="featured-rooms-icon" onClick={nextProperty} />
+                            </div>
 
             </section>
         )
