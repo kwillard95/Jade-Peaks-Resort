@@ -333,21 +333,40 @@
   
   .featured-rooms-icon {
     display: inline-block;
-    font-size: 80px;
-    color: var(--primaryColor);
+    font-size: 20px;
+    color: black;
+    background-color: var(--primaryColor);
     cursor: pointer;
-    padding: 20px;
+    margin: 0 5px;
+    margin-bottom: 30px;
 
     &:hover {
-        font-size: 90px
+        font-size: 25px
     }
   }
 
   .icon-container {
-      position: relative;
-      top: 300px;
-      left: 560px
+      margin: 0 auto;
+      text-align: center;
+    //   margin-top: 100px
+    //   position: relative;
+    //   top: 300px;
+    //   left: 560px
   }
+
+//   @media screen and (min-width: 992px) {
+//     .carousel-container {
+//         width: 320px;
+//     }
+//     .cards-slider {
+//         max-width: 320px;
+//     }
+//     .cards-wrapper {
+//         .room {
+//            min-width: 200px
+//         }
+//     }
+//   }
   
   /* room */
   .room {
