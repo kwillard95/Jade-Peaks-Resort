@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import defaultImg from '../images/default-room.jpg'
 import PropTypes from 'prop-types';
 
-export default function Room({ room }) {
+export default function Room({ room, id}) {
     const { name, slug, images, price } = room;
     return (
-        <article className="room">
+        <article className="room" id={`room-${id}`}>
             <div className="img-container">
                 <img src={images[0] || defaultImg} alt="single room" />
                 <div className="price-top">
