@@ -37,21 +37,21 @@ function FeaturedRooms({ context }) {
         return (
             <section className="featured-rooms">
                 <Title title="featured rooms" />
+                        <div className="icon-container">
+                            <FaAngleLeft className="featured-rooms-icon" onClick={previousProperty} />
+                            <FaAngleRight className="featured-rooms-icon" onClick={nextProperty} />
+                        </div>
                 <div className="carousel-container">
                     <div className={`cards-slider active-slide-${roomIdx}`}>
                         <div className="cards-wrapper" style={{
-                            transform: `translateX(-${roomIdx*(100/rooms.length)}%)`
+                            transform: `translateX(-${roomIdx * (100 / rooms.length)}%)`
                         }}>
                             {
-                                rooms.map((room, idx) => <Room key={room.id} room={room} id={idx}/>)
+                                rooms.map((room, idx) => <Room key={room.id} room={room} id={idx} />)
                             }
                         </div>
                     </div>
                 </div>
-                            <div className="icon-container">
-                            <FaAngleLeft className="featured-rooms-icon" onClick={previousProperty} />
-                            <FaAngleRight className="featured-rooms-icon" onClick={nextProperty} />
-                            </div>
 
             </section>
         )
